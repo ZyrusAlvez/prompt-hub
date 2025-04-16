@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

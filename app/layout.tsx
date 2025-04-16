@@ -1,14 +1,22 @@
 // app/layout.tsx
-import "../styles/global.css";
+import "@styles/global.css";
 import React, { ReactNode } from "react";
+import Nav from "@components/Nav";
 
 export const metadata = {
   title: "Prompt Hub",
-  description: "A collection of prompts that users can share and copy for various creative uses.",
-  keywords: ["prompts", "sharing prompts", "creative prompts", "productivity", "prompt collections", "prompt hub"],
+  description:
+    "Prompt Hub is an open source AI prompting tool for modern world to discover, create, and share creative prompts",
+  keywords: [
+    "prompts",
+    "sharing prompts",
+    "creative prompts",
+    "productivity",
+    "prompt collections",
+    "prompt hub",
+  ],
   authors: [{ name: "Zyrus Alvez" }],
 };
-
 
 type Props = {
   children: ReactNode;
@@ -18,7 +26,10 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body className="flex flex-col font-roboto">
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
