@@ -1,7 +1,7 @@
-// app/layout.tsx
 import "@styles/global.css";
 import React, { ReactNode } from "react";
 import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 
 export const metadata = {
   title: "Prompt Hub",
@@ -26,9 +26,12 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <head />
+      
       <body className="flex flex-col font-roboto">
-        <Nav />
-        {children}
+        <Provider>
+          <Nav />
+          {children}
+        </Provider>
       </body>
     </html>
   );
